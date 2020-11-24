@@ -30,9 +30,7 @@
 }
 
 .footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #0070f3;
 }
 
 .title a {
