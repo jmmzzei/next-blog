@@ -17,12 +17,10 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="/posts/1" className={styles.card}>
             <h3>Post 1 &rarr;</h3>
             <p>Lorem ipsum...</p>
           </a>
-
         </div>
       </main>
 
