@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Grid from '../components/Grid'
 import Card from '../components/Card'
+import Title from '../components/Title'
 
 export default function Home() {
   return (
@@ -13,11 +14,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to my Blog</h1>
+        <Title>Welcome to my Blog</Title>
 
         <p className={styles.description}>
           Below you have some of my posts... Enjoy!
         </p>
+
         <Grid>
           <Link href="/posts/1">
             <Card title="Post 1" desc="Lorem ipsum" />
