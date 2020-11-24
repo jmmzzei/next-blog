@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import styles from '../styles/Home.module.css'
 
 export default () => {
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <Link href="/">
         <a>Home</a>
       </Link>
