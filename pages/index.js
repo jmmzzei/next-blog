@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import Grid from '../components/Grid'
+import Card from '../components/Card'
 
 export default function Home() {
   return (
@@ -15,13 +18,11 @@ export default function Home() {
         <p className={styles.description}>
           Below you have some of my posts... Enjoy!
         </p>
-
-        <div className={styles.grid}>
-          <a href="/posts/1" className={styles.card}>
-            <h3>Post 1 &rarr;</h3>
-            <p>Lorem ipsum...</p>
-          </a>
-        </div>
+        <Grid>
+          <Link href="/posts/1">
+            <Card title="Post 1" desc="Lorem ipsum" />
+          </Link>
+        </Grid>
       </main>
 
       <footer className={styles.footer}>
