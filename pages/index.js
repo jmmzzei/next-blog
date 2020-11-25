@@ -5,10 +5,12 @@ import Card from '../components/Card'
 import Title from '../components/Title'
 import Footer from '../components/Footer'
 import Main from '../components/Main'
+import Container from '../components/Container'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Container>
+
       <Head>
         <title>Next Blog</title>
         <link rel="icon" href="/favicon.ico" />
@@ -26,6 +28,6 @@ export default function Home() {
         </Grid>
       </Main>
       <Footer />
-    </div>
+    </Container>
   )
 }
