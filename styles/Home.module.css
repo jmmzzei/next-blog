@@ -129,6 +129,14 @@
   line-height: 1.5;
 }
 
+.detail {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding-top: 5rem;
+  width: 70%;
+}
+
 .logo {
   height: 1em;
 }
