@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Grid from '../components/Grid'
 import Card from '../components/Card'
 import Title from '../components/Title'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -26,10 +27,7 @@ export default function Home() {
           </Link>
         </Grid>
       </main>
-
-      <footer className={styles.footer}>
-        Coded_by_<a href="jmmzzei.com"> me </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
