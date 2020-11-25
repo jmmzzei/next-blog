@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import Grid from '../components/Grid'
 import Card from '../components/Card'
 import Title from '../components/Title'
 import Footer from '../components/Footer'
+import Main from '../components/Main'
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <Main>
         <Title>Welcome to my Blog</Title>
 
         <p className={styles.description}>
@@ -22,11 +22,9 @@ export default function Home() {
         </p>
 
         <Grid>
-          <Link href="/posts/1">
-            <Card title="Post 1" desc="Lorem ipsum" />
-          </Link>
+          <Card title="Post 1" desc="Lorem ipsum" id="/posts/1" />
         </Grid>
-      </main>
+      </Main>
       <Footer />
     </div>
   )
