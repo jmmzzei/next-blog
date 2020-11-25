@@ -1,22 +1,9 @@
-import { useState, useEffect } from 'react'
 import Title from '../../components/Title'
 import Card from '../../components/Card'
 import Grid from '../../components/Grid'
 import Main from '../../components/Main'
 
-export default () => {
-  const [posts, setPosts] = useState([])
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-      if (res.ok) {
-        const newPosts = await res.json()
-        setPosts(newPosts)
-      }
-    }
-    fetchPosts()
-  }, [])
-
+export default ({ posts }) => {
   return (
     <Main>
       <Title>Posts</Title>
@@ -27,4 +14,13 @@ export default () => {
       </Grid>
     </Main>
   )
+}
+
+export async function getServerSideProps() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  if (res.ok) {
+    const posts = await res.json()
+    return { props: { posts: posts } }
+  }
+  return {}
 }
